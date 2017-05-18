@@ -25,4 +25,15 @@ public class GuavaCache<T> {
 
         cache.invalidate(key);
     }
+
+
+    /* getter and setter **/
+    
+    public Cache<String, T> getCache() {
+        return cache;
+    }
+
+    public void setCache(Cache<String, T> cache) {
+        this.cache = cache;
+    }
 }
