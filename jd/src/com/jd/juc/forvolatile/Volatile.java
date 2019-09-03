@@ -1,10 +1,8 @@
 package com.jd.juc.forvolatile;
 
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.Scanner;
 
-@Slf4j
 public class Volatile implements Runnable{
     private static volatile boolean flag = true;
 
@@ -13,7 +11,7 @@ public class Volatile implements Runnable{
 //            log.error("-----------");
         }
 
-        log.error(" is over ", flag);
+//        log.error(" is over ", flag);
     }
 
     public void stop(){
@@ -24,7 +22,7 @@ public class Volatile implements Runnable{
         final Volatile avolatile = new Volatile();
         new Thread(avolatile, "aThread").start();
 
-        log.error("main thread is go on");
+//        log.error("main thread is go on");
 
 
         Scanner scanner = new Scanner(System.in);
@@ -41,7 +39,7 @@ public class Volatile implements Runnable{
 
         }
 
-        log.error("main is over");
+//        log.error("main is over");
     }
 }
 
